@@ -1,0 +1,119 @@
+/* 頁尾 footer 第一層 .footer */
+.footer{
+    padding: 40px 0;
+    color: #FFF;
+    @include wrap__1110;
+    @include Pad(){
+        @include wrap__690;
+    }
+    @include Phone(){
+        @include wrap__345;
+    }
+    a{
+        color: #FFF;
+    }
+
+    .content{
+        /* footer 第一列 .content 主要內容區 */
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #FFF;
+        margin-bottom: 32px;
+        ul.navList{
+            /* footer 第一列 第一欄 .main */
+            /* navList 導覽列 */
+            display: flex;
+            margin-bottom: 24px;
+            @include Phone(){
+                display: none;
+            }
+            li+li{
+                margin-left: 48px;
+            }
+            a{
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        
+        ul.contact{
+            /* contact 聯絡方式 */
+            margin-bottom: 24px;    
+            li,span{
+                font-size: 36px;
+                line-height: 54px;
+                @include Phone(){
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+            }
+            li{
+                display: flex;
+                align-items: center;
+            }
+            span{
+                margin-right: 20px;
+            }
+        }
+
+        .community{
+            /* footer 第一列 第二欄 社群媒體 ul.community */
+            display: flex;
+            a{
+                display: block;
+                width: 48px;
+                height: 48px;
+                @include Phone(){
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            li+li{
+                margin-left: 32px;
+            }
+            .facebook{
+                background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-fb.svg") center/cover;
+            }
+            .instagram{
+                background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-ig.svg") center/cover;
+            }
+            .line{
+                background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-line.svg") center/cover;
+            }
+        }
+    }
+
+    .appendix{
+        /* footer 第二列 .appendix 附註區 */
+        display: flex;
+        justify-content: space-between;
+        @include Phone(){
+            flex-direction: column;
+        }
+        
+        .copyright{
+            /* footer 第二列 第一欄 copyright */
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .rules{
+            /* footer 第二列 第二欄 rules 政策條款區 */
+            display: flex;
+            @include Phone(){
+                flex-direction: column;
+            }
+            li+li{
+                margin-left: 48px;
+                @include Phone(){
+                    margin-left: 0px;
+                }
+            }
+            a{
+                color: #FFF;
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+    }
+}

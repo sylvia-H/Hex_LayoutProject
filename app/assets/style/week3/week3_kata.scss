@@ -1,0 +1,131 @@
+*,*::before,*::after{
+    box-sizing:border-box;
+    text-decoration: none;
+  }
+  
+  /* 全局設定 */
+  body{
+    font-size: 16px;
+  }
+  
+  img{
+    max-width: 100%;
+    height:auto;
+    vertical-align: middle;
+  }
+  
+  /* 細部版面配置 */
+  .container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .header{
+    display: flex;
+    justify-content: space-between;
+    .header__logo{
+      display: block;
+      width: 250px;
+      height: 250px;
+      background: url('http://fakeimg.pl/250x250') no-repeat;
+    }
+  
+    .header__navList{
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        a{
+          display: block;
+          padding: 10px;
+          background-color: #3399FF;
+          color:#fff;
+          &:hover{
+            background-color: #FFA500;
+          }
+        }
+      }
+    }
+    
+  }
+  
+  .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .news{
+      border:2px solid #000;
+      padding: 10px;
+      width: 75%;
+      h2{
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+      }
+      p{
+        line-height: 1.5;
+      }
+    }
+    .sidebar{
+      border:2px solid #000;
+      padding: 5px;
+      width: 20%;
+      li{
+        margin-bottom: 10px;
+      }
+    }
+  }
+  
+  .footer{
+    text-align: center;
+    padding: 8px;
+  }
+  
+  /* RWD - mobile */
+  @media (max-width: 768px){
+    .header{
+      flex-direction: column;
+      align-items: center;
+      .header__logo{
+        display: block;
+        width: 150px;
+        height: 150px;
+        background: url('http://fakeimg.pl/150x150') no-repeat;
+        margin-bottom: 10px;
+      }
+      .header__navList{
+        li{
+        width: 50%;
+        text-align: center;
+        margin-bottom: 10px;
+        }
+      }
+    }
+    .content{
+      .news{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .sidebar{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  
+  
+  /* util */
+  .mb-10{
+    margin-bottom: 10px;
+  }
+  
+  .mb-24{
+    margin-bottom: 24px;
+  }
+  
+  .pt-20{
+    padding-top: 20px;
+  }
+  

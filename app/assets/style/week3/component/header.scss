@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,900&display=swap');
+
+/* 全局設定 */
+body{
+    font-family: 'Roboto','Noto Sans TC',sans-serif;
+}
+
+a{
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+header,footer{
+    background-color: #AA0601;
+}
+
+/* 頁首 header 第一層 .header */
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @include Phone(){
+        justify-content: center;
+    }
+
+    .logo{
+        /* 頁首 header Logo */
+        @include hide-text;
+        width: 80px;
+        height: 49px;
+        margin: 30px;
+        background: url('../../images/week3/logo-new_工作區域\ 1@2x.png') center/cover;
+        @include Phone(){
+            background: url('../../images/week3/logo-new_工作區域\ 1.png');
+        }
+    }
+    
+    ul.navList{
+        /* 頁首 header .navList 導覽列 */
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px;
+        li+li{
+            margin-left: 64px;
+        }
+        @include Phone(){
+            width: 100%;
+            margin: 0;
+            justify-content: space-between;
+            li{
+                width: 50%;
+                border: 1px solid #FFF;
+                text-align: center;
+            }
+            li+li{
+                margin-left: 0;
+            }
+        }
+        a{
+            color: #FFF;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}

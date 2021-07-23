@@ -26,8 +26,8 @@ h1{
     font-size: 40px;
     line-height: 50px;
     font-weight: 800;
-    color: #333;
-    text-shadow: 0.02em 0.02em #ccc;
+    color: #ddd;
+    text-shadow: 0.06em 0.06em #333;
     margin: 20px;
 }
 
@@ -36,7 +36,7 @@ table{
 }
 
 table th{
-    border: solid 1px #000;
+    border: solid 1px #aaa;
     color: #fff;
     background-color:#333;
     font-size: 24px;
@@ -44,10 +44,11 @@ table th{
 }
 
 table td{
-    border: solid 1px #000;
+    border: solid 1px #ccc;
     color: #fff;
     background-color:rgba(28, 40, 58, 0.8);
     padding: 12px;
+    vertical-align: middle;
 }
 
 td a{
