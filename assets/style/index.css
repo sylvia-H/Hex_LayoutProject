@@ -1,55 +1,49 @@
-*{
-    list-style: none;
-    font-family: "Arial","Microsoft JhengHei","微軟正黑體",sans-serif;
-}
+@charset "UTF-8";
+* {
+  list-style: none;
+  font-family: "Arial","Microsoft JhengHei","微軟正黑體",sans-serif; }
 
-html{
-    width: 100% ;
-    height: 100% ;
-    background: url('https://lidemy.github.io/mentor-program-4th-sylvia-H/homeworks/week7/hw3/img/mtsylvia.jpg') no-repeat center/cover;
-}
+html {
+  width: 100%;
+  height: 100%;
+  background: url("https://lidemy.github.io/mentor-program-4th-sylvia-H/homeworks/week7/hw3/img/mtsylvia.jpg") no-repeat center/cover; }
 
-body{
-    text-align: center;
-    font-size: 18px;
-}
+body {
+  text-align: center;
+  font-size: 18px; }
 
-a{
-    text-decoration: none;
-}
+a {
+  text-decoration: none; }
 
-a:hover{
-    opacity: 0.5;
-}
+a:hover {
+  opacity: 0.5; }
 
-h1{
-    font-size: 40px;
-    line-height: 50px;
-    font-weight: 800;
-    color: #333;
-    text-shadow: 0.02em 0.02em #ccc;
-    margin: 20px;
-}
+h1 {
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 800;
+  color: #ddd;
+  text-shadow: 0.06em 0.06em #333;
+  margin: 20px; }
 
-table{
-    margin: 0 auto;
-}
+table {
+  margin: 0 auto; }
 
-table th{
-    border: solid 1px #000;
-    color: #fff;
-    background-color:#333;
-    font-size: 24px;
-    padding: 14px;
-}
+table th {
+  border: solid 1px #aaa;
+  color: #fff;
+  background-color: #333;
+  font-size: 24px;
+  padding: 14px; }
 
-table td{
-    border: solid 1px #000;
-    color: #fff;
-    background-color:rgba(28, 40, 58, 0.8);
-    padding: 12px;
-}
+table td {
+  border: solid 1px #ccc;
+  color: #fff;
+  background-color: rgba(28, 40, 58, 0.8);
+  padding: 12px;
+  vertical-align: middle; }
 
-td a{
-    color: #ccc;
-}
+td a {
+  color: #ccc; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none; }
+
+/* 全局設定 */
+body {
+  font-size: 16px; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; }
+
+/* 細部版面配置 */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .header .header__logo {
+    display: block;
+    width: 250px;
+    height: 250px;
+    background: url("http://fakeimg.pl/250x250") no-repeat; }
+  .header .header__navList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .header .header__navList li a {
+      display: block;
+      padding: 10px;
+      background-color: #3399FF;
+      color: #fff; }
+      .header .header__navList li a:hover {
+        background-color: #FFA500; }
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .content .news {
+    border: 2px solid #000;
+    padding: 10px;
+    width: 75%; }
+    .content .news h2 {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.2; }
+    .content .news p {
+      line-height: 1.5; }
+  .content .sidebar {
+    border: 2px solid #000;
+    padding: 5px;
+    width: 20%; }
+    .content .sidebar li {
+      margin-bottom: 10px; }
+
+.footer {
+  text-align: center;
+  padding: 8px; }
+
+/* RWD - mobile */
+@media (max-width: 768px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .header .header__logo {
+      display: block;
+      width: 150px;
+      height: 150px;
+      background: url("http://fakeimg.pl/150x150") no-repeat;
+      margin-bottom: 10px; }
+    .header .header__navList li {
+      width: 50%;
+      text-align: center;
+      margin-bottom: 10px; }
+  .content .news {
+    width: 100%;
+    margin-bottom: 20px; }
+  .content .sidebar {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
+
+/* util */
+.mb-10 {
+  margin-bottom: 10px; }
+
+.mb-24 {
+  margin-bottom: 24px; }
+
+.pt-20 {
+  padding-top: 20px; }
+
+/*# sourceMappingURL=week3_kata.css.map */
