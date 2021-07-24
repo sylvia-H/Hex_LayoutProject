@@ -318,6 +318,114 @@ ul.footer__content__main__contact {
       .home-banner__content h3 {
         font-size: 16px; } }
 
+/* Blog 部落格 */
+/* Blog 第一層 副導覽列 基本設定*/
+.blog__subNavbar {
+  background-color: #650300; }
+  @media (max-width: 767px) {
+    .blog__subNavbar {
+      display: none; } }
+  .blog__subNavbar .wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 1110px;
+    margin: 0 auto; }
+    @media (max-width: 996px) {
+      .blog__subNavbar .wrap {
+        max-width: 690px;
+        margin: 0 auto; } }
+  .blog__subNavbar span {
+    color: #FFF;
+    font-size: 30px; }
+
+/* Blog 第一層 副導覽列 */
+/* Blog 副導覽列的 navList */
+ul.blog__subNavbar__navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  ul.blog__subNavbar__navList li a {
+    display: block;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 12px 0; }
+    @media (max-width: 996px) {
+      ul.blog__subNavbar__navList li a {
+        font-size: 16px;
+        padding: 16px 0; } }
+  ul.blog__subNavbar__navList li + li {
+    margin-left: 48px; }
+    @media (max-width: 996px) {
+      ul.blog__subNavbar__navList li + li {
+        margin-left: 32px; } }
+
+/* Blog 第二層 主要內容區 .blog__main */
+.blog__main {
+  max-width: 1110px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 160px; }
+  @media (max-width: 996px) {
+    .blog__main {
+      max-width: 690px;
+      margin: 0 auto;
+      margin-top: 32px;
+      margin-bottom: 96px; } }
+  @media (max-width: 767px) {
+    .blog__main {
+      max-width: 345px;
+      margin: 0 auto;
+      margin-top: 28px;
+      margin-bottom: 56px; } }
+  .blog__main h2 {
+    font-size: 48px;
+    line-height: 80px;
+    font-weight: bold;
+    padding-left: 16px;
+    border-left: 16px solid #9F1213; }
+
+/* Blog 第二層 主要內容區 .blog__main */
+/* 文章區塊 .blog__main__articles */
+/* Blog 第二層 主要內容區 .blog__main */
+/* 分頁導覽列 .blog__main__pagination */
+ul.blog__main__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  ul.blog__main__pagination li a {
+    display: block;
+    border: 1px solid #555555;
+    color: #555555; }
+    ul.blog__main__pagination li a.active {
+      background-color: #000; }
+  ul.blog__main__pagination li:first-child a, ul.blog__main__pagination li:last-child a {
+    font-size: 19px;
+    line-height: 29px;
+    padding: 11px 12px;
+    background-color: #F2F2F2; }
+    @media (max-width: 767px) {
+      ul.blog__main__pagination li:first-child a, ul.blog__main__pagination li:last-child a {
+        font-size: 14px;
+        line-height: 26px;
+        padding: 10px 10px; } }
+  ul.blog__main__pagination li a {
+    font-size: 18px;
+    line-height: 27px;
+    padding: 12px 16px; }
+    @media (max-width: 767px) {
+      ul.blog__main__pagination li a {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 12px 15px; } }
+
 /* Util */
 
 /*# sourceMappingURL=all.css.map */

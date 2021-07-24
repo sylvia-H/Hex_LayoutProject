@@ -341,6 +341,9 @@ ul.footer__content__main__contact {
       .blog__subNavbar .wrap {
         max-width: 690px;
         margin: 0 auto; } }
+  .blog__subNavbar span {
+    color: #FFF;
+    font-size: 30px; }
 
 /* Blog 第一層 副導覽列 */
 /* Blog 副導覽列的 navList */
@@ -348,27 +351,21 @@ ul.blog__subNavbar__navList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-li a {
-  display: block;
-  color: #FFF;
-  font-size: 20px;
-  line-height: 24px;
-  padding: 12px 0; }
-  @media (max-width: 996px) {
-    li a {
-      font-size: 16px;
-      padding: 16px 0; } }
-
-li + li {
-  margin-left: 48px; }
-  @media (max-width: 996px) {
-    li + li {
-      margin-left: 32px; } }
-
-span {
-  color: #FFF;
-  font-size: 30px; }
+  ul.blog__subNavbar__navList li a {
+    display: block;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 12px 0; }
+    @media (max-width: 996px) {
+      ul.blog__subNavbar__navList li a {
+        font-size: 16px;
+        padding: 16px 0; } }
+  ul.blog__subNavbar__navList li + li {
+    margin-left: 48px; }
+    @media (max-width: 996px) {
+      ul.blog__subNavbar__navList li + li {
+        margin-left: 32px; } }
 
 /* Blog 第二層 主要內容區 .blog__main */
 .blog__main {
