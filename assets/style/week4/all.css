@@ -60,6 +60,7 @@ img {
   height: auto;
   vertical-align: middle; }
 
+/* Layout*/
 /* 全局設定 */
 body {
   font-family: 'Roboto','Noto Sans TC',sans-serif; }
@@ -127,57 +128,6 @@ header, footer {
       color: #FFF;
       font-size: 20px;
       line-height: 30px; }
-
-/* banner 大圖區 */
-.banner {
-  height: calc(100vh - 109px);
-  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") center/cover;
-  color: #650300; }
-  .banner .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: calc(100vh - 109px);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    max-width: 1110px;
-    margin: 0 auto; }
-    @media (max-width: 996px) {
-      .banner .content {
-        max-width: 690px;
-        margin: 0 auto; } }
-    @media (max-width: 767px) {
-      .banner .content {
-        max-width: 345px;
-        margin: 0 auto; } }
-    .banner .content h2 {
-      font-size: 64px;
-      line-height: 96px; }
-      @media (max-width: 996px) {
-        .banner .content h2 {
-          font-size: 48px;
-          line-height: 72px; } }
-      @media (max-width: 767px) {
-        .banner .content h2 {
-          font-size: 32px; } }
-    .banner .content h3 {
-      font-size: 36px;
-      line-height: 54px; }
-      @media (max-width: 996px) {
-        .banner .content h3 {
-          font-size: 20px;
-          line-height: 30px; } }
-      @media (max-width: 767px) {
-        .banner .content h3 {
-          font-size: 16px; } }
 
 /* 頁尾 footer 第一層 .footer */
 .footer {
@@ -302,5 +252,165 @@ header, footer {
         color: #FFF;
         font-size: 14px;
         line-height: 21px; }
+
+/* Pages */
+/* banner 大圖區 */
+.banner {
+  height: calc(100vh - 109px);
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") center/cover;
+  color: #650300; }
+  .banner .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: calc(100vh - 109px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    max-width: 1110px;
+    margin: 0 auto; }
+    @media (max-width: 996px) {
+      .banner .content {
+        max-width: 690px;
+        margin: 0 auto; } }
+    @media (max-width: 767px) {
+      .banner .content {
+        max-width: 345px;
+        margin: 0 auto; } }
+    .banner .content h2 {
+      font-size: 64px;
+      line-height: 96px; }
+      @media (max-width: 996px) {
+        .banner .content h2 {
+          font-size: 48px;
+          line-height: 72px; } }
+      @media (max-width: 767px) {
+        .banner .content h2 {
+          font-size: 32px; } }
+    .banner .content h3 {
+      font-size: 36px;
+      line-height: 54px; }
+      @media (max-width: 996px) {
+        .banner .content h3 {
+          font-size: 20px;
+          line-height: 30px; } }
+      @media (max-width: 767px) {
+        .banner .content h3 {
+          font-size: 16px; } }
+
+/* Blog 部落格 */
+/* Blog 第一層 副導覽列 */
+.blog__subNavbar {
+  background-color: #650300; }
+  @media (max-width: 767px) {
+    .blog__subNavbar {
+      display: none; } }
+  .blog__subNavbar .subNavbar__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 1110px;
+    margin: 0 auto; }
+    @media (max-width: 996px) {
+      .blog__subNavbar .subNavbar__wrap {
+        max-width: 690px;
+        margin: 0 auto; } }
+    .blog__subNavbar .subNavbar__wrap ul.navList {
+      /* Blog 副導覽列的 .navList */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+    .blog__subNavbar .subNavbar__wrap li a {
+      display: block;
+      color: #FFF;
+      font-size: 20px;
+      line-height: 24px;
+      padding: 12px 0; }
+      @media (max-width: 996px) {
+        .blog__subNavbar .subNavbar__wrap li a {
+          font-size: 16px;
+          padding: 16px 0; } }
+    .blog__subNavbar .subNavbar__wrap li + li {
+      margin-left: 48px; }
+      @media (max-width: 996px) {
+        .blog__subNavbar .subNavbar__wrap li + li {
+          margin-left: 32px; } }
+    .blog__subNavbar .subNavbar__wrap span {
+      color: #FFF;
+      font-size: 30px; }
+
+/* Blog 第二層 主要內容區 .blog__main */
+.blog__main {
+  max-width: 1110px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 160px; }
+  @media (max-width: 996px) {
+    .blog__main {
+      max-width: 690px;
+      margin: 0 auto;
+      margin-top: 32px;
+      margin-bottom: 96px; } }
+  @media (max-width: 767px) {
+    .blog__main {
+      max-width: 345px;
+      margin: 0 auto;
+      margin-top: 28px;
+      margin-bottom: 56px; } }
+  .blog__main h2 {
+    font-size: 48px;
+    line-height: 80px;
+    font-weight: bold;
+    padding-left: 16px;
+    border-left: 16px solid #9F1213; }
+
+/* Blog 第二層 主要內容區 .blog__main */
+/* 文章區塊 .blog__main__articles */
+/* Blog 第二層 主要內容區 .blog__main */
+/* 分頁導覽列 .pagination */
+ul.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  ul.pagination li a {
+    display: block;
+    border: 1px solid #555555;
+    color: #555555; }
+    ul.pagination li a.active {
+      background-color: #000; }
+  ul.pagination li:first-child a, ul.pagination li:last-child a {
+    font-size: 19px;
+    line-height: 29px;
+    padding: 11px 12px;
+    background-color: #F2F2F2; }
+    @media (max-width: 767px) {
+      ul.pagination li:first-child a, ul.pagination li:last-child a {
+        font-size: 14px;
+        line-height: 26px;
+        padding: 10px 10px; } }
+  ul.pagination li a {
+    font-size: 18px;
+    line-height: 27px;
+    padding: 12px 16px; }
+    @media (max-width: 767px) {
+      ul.pagination li a {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 12px 15px; } }
+
+/* Util */
 
 /*# sourceMappingURL=all.css.map */
