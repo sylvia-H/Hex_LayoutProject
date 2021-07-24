@@ -14,33 +14,33 @@
             @include wrap__690;
         }
     }
+    span{
+        color: #FFF;
+        font-size: 30px;
+    }
 }
 
 /* Blog 第一層 副導覽列 */
 /* Blog 副導覽列的 navList */
 ul.blog__subNavbar__navList{
     display: flex;
-}
-li a{
-    display: block;
-    color: #FFF;
-    font-size: 20px;
-    line-height: 24px;
-    padding: 12px 0;
-    @include Pad(){
-        font-size: 16px;
-        padding: 16px 0;
+    li a{
+        display: block;
+        color: #FFF;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 12px 0;
+        @include Pad(){
+            font-size: 16px;
+            padding: 16px 0;
+        }
     }
-}
-li+li{
-    margin-left: 48px;
-    @include Pad(){
-        margin-left: 32px;
+    li+li{
+        margin-left: 48px;
+        @include Pad(){
+            margin-left: 32px;
+        }
     }
-}
-span{
-    color: #FFF;
-    font-size: 30px;
 }
 
 
