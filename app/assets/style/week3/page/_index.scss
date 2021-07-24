@@ -1,42 +1,44 @@
-/* banner 大圖區 */
-.banner{
+/* 首頁 banner 大圖區 .home-banner */
+.home-banner{
     height: calc(100vh - 109px);
     background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") center/cover;
     color: #650300;
-    .content{
-        display: flex;
-        flex-direction: column;
-        height: calc(100vh - 109px);
-        justify-content: center;
-        align-items: flex-end;
-        @include wrap__1110;
+}
+
+/* 首頁 banner 大圖區 文字內容 .home-banner__content*/
+.home-banner__content{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 109px);
+    justify-content: center;
+    align-items: flex-end;
+    @include wrap__1110;
+    @include Pad(){
+        @include wrap__690;
+    }
+    @include Phone(){
+        @include wrap__345;
+    }
+    h2{
+        font-size: 64px;
+        line-height: 96px;
         @include Pad(){
-            @include wrap__690;
+            font-size: 48px;
+            line-height: 72px;
         }
         @include Phone(){
-            @include wrap__345;
+            font-size: 32px;
         }
-        h2{
-            font-size: 64px;
-            line-height: 96px;
-            @include Pad(){
-                font-size: 48px;
-                line-height: 72px;
-            }
-            @include Phone(){
-                font-size: 32px;
-            }
+    }
+    h3{
+        font-size: 36px;
+        line-height: 54px;
+        @include Pad(){
+            font-size: 20px;
+            line-height: 30px;
         }
-        h3{
-            font-size: 36px;
-            line-height: 54px;
-            @include Pad(){
-                font-size: 20px;
-                line-height: 30px;
-            }
-            @include Phone(){
-                font-size: 16px;
-            }
+        @include Phone(){
+            font-size: 16px;
         }
     }
 }

@@ -12,112 +12,113 @@
     a{
         color: #FFF;
     }
+}
 
-    .content{
-        /* footer 第一列 .content 主要內容區 */
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #FFF;
-        margin-bottom: 32px;
-        ul.navList{
-            /* footer 第一列 第一欄 .main */
-            /* navList 導覽列 */
-            display: flex;
-            margin-bottom: 24px;
-            @include Phone(){
-                display: none;
-            }
-            li+li{
-                margin-left: 48px;
-            }
-            a{
-                font-size: 16px;
-                line-height: 24px;
-            }
-        }
-        
-        ul.contact{
-            /* contact 聯絡方式 */
-            margin-bottom: 24px;    
-            li,span{
-                font-size: 36px;
-                line-height: 54px;
-                @include Phone(){
-                    font-size: 16px;
-                    line-height: 30px;
-                }
-            }
-            li{
-                display: flex;
-                align-items: center;
-            }
-            span{
-                margin-right: 20px;
-            }
-        }
+/* footer 第一列 .footer__content 主要內容區 */
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 32px;
+}
 
-        .community{
-            /* footer 第一列 第二欄 社群媒體 ul.community */
-            display: flex;
-            a{
-                display: block;
-                width: 48px;
-                height: 48px;
-                @include Pad(){
-                    width: 24px;
-                    height: 24px;
-                }
-                @include Phone(){
-                    width: 24px;
-                    height: 24px;
-                }
-            }
-            li+li{
-                margin-left: 32px;
-            }
-            .facebook{
-                background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-fb.svg") center/cover;
-            }
-            .instagram{
-                background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-ig.svg") center/cover;
-            }
-            .line{
-                background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-line.svg") center/cover;
-            }
+/* footer 第一列 第一欄 主要內容 .footer__content__main */
+/* navList 導覽列 */
+ul.footer__content__main__navList{
+    display: flex;
+    margin-bottom: 24px;
+    @include Phone(){
+        display: none;
+    }
+    li+li{
+        margin-left: 48px;
+    }
+    a{
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+/* contact 聯絡方式 */
+ul.footer__content__main__contact{
+    margin-bottom: 24px;    
+    li,span{
+        font-size: 36px;
+        line-height: 54px;
+        @include Phone(){
+            font-size: 16px;
+            line-height: 30px;
         }
     }
-
-    .appendix{
-        /* footer 第二列 .appendix 附註區 */
+    li{
         display: flex;
-        justify-content: space-between;
-        @include Phone(){
-            flex-direction: column;
-        }
-        
-        .copyright{
-            /* footer 第二列 第一欄 copyright */
-            font-size: 16px;
-            line-height: 24px;
-        }
+        align-items: center;
+    }
+    span{
+        margin-right: 20px;
+    }
+}
 
-        .rules{
-            /* footer 第二列 第二欄 rules 政策條款區 */
-            display: flex;
-            @include Phone(){
-                flex-direction: column;
-            }
-            li+li{
-                margin-left: 48px;
-                @include Phone(){
-                    margin-left: 0px;
-                }
-            }
-            a{
-                color: #FFF;
-                font-size: 14px;
-                line-height: 21px;
-            }
+/* footer 第一列 第二欄 社群媒體 ul.footer__content__community */
+.footer__content__community{
+    display: flex;
+    a{
+        display: block;
+        width: 48px;
+        height: 48px;
+        @include Pad(){
+            width: 24px;
+            height: 24px;
         }
+        @include Phone(){
+            width: 24px;
+            height: 24px;
+        }
+    }
+    li+li{
+        margin-left: 32px;
+    }
+    .facebook{
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-fb.svg") center/cover;
+    }
+    .instagram{
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-ig.svg") center/cover;
+    }
+    .line{
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-line.svg") center/cover;
+    }
+}
+
+/* footer 第二列 .footer__appendix 附註區 */
+.footer__appendix{
+    display: flex;
+    justify-content: space-between;
+    @include Phone(){
+        flex-direction: column;
+    }
+}
+
+/* footer 第二列 第一欄 copyright */  
+.footer__appendix__copyright{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* footer 第二列 第二欄 rules 政策條款區 */
+.footer__appendix__rules{
+    display: flex;
+    @include Phone(){
+        flex-direction: column;
+    }
+    li+li{
+        margin-left: 48px;
+        @include Phone(){
+            margin-left: 0px;
+        }
+    }
+    a{
+        color: #FFF;
+        font-size: 14px;
+        line-height: 21px;
     }
 }

@@ -1,9 +1,12 @@
 /* Setting*/
-@import "../setting/variable";
-@import "../setting/reset";
-@import "../setting/grid";
-@import "../setting/fonts";
-@import "../setting/mixin";
+@import "./setting/variable";
+@import "./setting/reset";
+@import "./setting/grid";
+@import "./setting/fonts";
+@import "./setting/mixin";
+
+/* Component */
+@import "./component/section-mixin";
 
 /* Layout*/
 @import "./layout/header";
