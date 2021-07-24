@@ -5,6 +5,9 @@
 @import "./setting/fonts";
 @import "./setting/mixin";
 
+/* Component */
+@import "./component/section-mixin";
+
 /* Layout*/
 @import "./layout/header";
 @import "./layout/footer";
