@@ -61,6 +61,8 @@ img {
   height: auto;
   vertical-align: middle; }
 
+/* Component */
+/* 分頁導覽列 */
 /* Layout*/
 /* 全局設定 */
 body {
@@ -102,33 +104,34 @@ header, footer {
     @media (max-width: 767px) {
       .header .logo {
         background: url("../../images/week3/logo-new_工作區域 1.png"); } }
-  .header ul.navList {
-    /* 頁首 header .navList 導覽列 */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: 30px; }
-    .header ul.navList li + li {
-      margin-left: 64px; }
-    @media (max-width: 767px) {
-      .header ul.navList {
-        width: 100%;
-        margin: 0;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between; }
-        .header ul.navList li {
-          width: 50%;
-          border: 1px solid #FFF;
-          text-align: center; }
-        .header ul.navList li + li {
-          margin-left: 0; } }
-    .header ul.navList a {
-      color: #FFF;
-      font-size: 20px;
-      line-height: 30px; }
+
+/* 頁首 header .navList 導覽列 */
+ul.header__navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 30px; }
+  ul.header__navList li + li {
+    margin-left: 64px; }
+  @media (max-width: 767px) {
+    ul.header__navList {
+      width: 100%;
+      margin: 0;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      ul.header__navList li {
+        width: 50%;
+        border: 1px solid #FFF;
+        text-align: center; }
+      ul.header__navList li + li {
+        margin-left: 0; } }
+  ul.header__navList a {
+    color: #FFF;
+    font-size: 20px;
+    line-height: 30px; }
 
 /* 頁尾 footer 第一層 .footer */
 .footer {
@@ -146,174 +149,183 @@ header, footer {
       margin: 0 auto; } }
   .footer a {
     color: #FFF; }
-  .footer .content {
-    /* footer 第一列 .content 主要內容區 */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    border-bottom: 1px solid #FFF;
-    margin-bottom: 32px; }
-    .footer .content ul.navList {
-      /* footer 第一列 第一欄 .main */
-      /* navList 導覽列 */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      margin-bottom: 24px; }
-      @media (max-width: 767px) {
-        .footer .content ul.navList {
-          display: none; } }
-      .footer .content ul.navList li + li {
-        margin-left: 48px; }
-      .footer .content ul.navList a {
-        font-size: 16px;
-        line-height: 24px; }
-    .footer .content ul.contact {
-      /* contact 聯絡方式 */
-      margin-bottom: 24px; }
-      .footer .content ul.contact li, .footer .content ul.contact span {
-        font-size: 36px;
-        line-height: 54px; }
-        @media (max-width: 767px) {
-          .footer .content ul.contact li, .footer .content ul.contact span {
-            font-size: 16px;
-            line-height: 30px; } }
-      .footer .content ul.contact li {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; }
-      .footer .content ul.contact span {
-        margin-right: 20px; }
-    .footer .content .community {
-      /* footer 第一列 第二欄 社群媒體 ul.community */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .footer .content .community a {
-        display: block;
-        width: 48px;
-        height: 48px; }
-        @media (max-width: 996px) {
-          .footer .content .community a {
-            width: 24px;
-            height: 24px; } }
-        @media (max-width: 767px) {
-          .footer .content .community a {
-            width: 24px;
-            height: 24px; } }
-      .footer .content .community li + li {
-        margin-left: 32px; }
-      .footer .content .community .facebook {
-        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-fb.svg") center/cover; }
-      .footer .content .community .instagram {
-        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-ig.svg") center/cover; }
-      .footer .content .community .line {
-        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-line.svg") center/cover; }
-  .footer .appendix {
-    /* footer 第二列 .appendix 附註區 */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+
+/* footer 第一列 .footer__content 主要內容區 */
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #FFF;
+  margin-bottom: 32px; }
+
+/* footer 第一列 第一欄 主要內容 .footer__content__main */
+/* navList 導覽列 */
+ul.footer__content__main__navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px; }
+  @media (max-width: 767px) {
+    ul.footer__content__main__navList {
+      display: none; } }
+  ul.footer__content__main__navList li + li {
+    margin-left: 48px; }
+  ul.footer__content__main__navList a {
+    font-size: 16px;
+    line-height: 24px; }
+
+/* contact 聯絡方式 */
+ul.footer__content__main__contact {
+  margin-bottom: 24px; }
+  ul.footer__content__main__contact li, ul.footer__content__main__contact span {
+    font-size: 36px;
+    line-height: 54px; }
     @media (max-width: 767px) {
-      .footer .appendix {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column; } }
-    .footer .appendix .copyright {
-      /* footer 第二列 第一欄 copyright */
-      font-size: 16px;
-      line-height: 24px; }
-    .footer .appendix .rules {
-      /* footer 第二列 第二欄 rules 政策條款區 */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      @media (max-width: 767px) {
-        .footer .appendix .rules {
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-              -ms-flex-direction: column;
-                  flex-direction: column; } }
-      .footer .appendix .rules li + li {
-        margin-left: 48px; }
-        @media (max-width: 767px) {
-          .footer .appendix .rules li + li {
-            margin-left: 0px; } }
-      .footer .appendix .rules a {
-        color: #FFF;
-        font-size: 14px;
-        line-height: 21px; }
+      ul.footer__content__main__contact li, ul.footer__content__main__contact span {
+        font-size: 16px;
+        line-height: 30px; } }
+  ul.footer__content__main__contact li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  ul.footer__content__main__contact span {
+    margin-right: 20px; }
+
+/* footer 第一列 第二欄 社群媒體 ul.footer__content__community */
+.footer__content__community {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .footer__content__community a {
+    display: block;
+    width: 48px;
+    height: 48px; }
+    @media (max-width: 996px) {
+      .footer__content__community a {
+        width: 24px;
+        height: 24px; } }
+    @media (max-width: 767px) {
+      .footer__content__community a {
+        width: 24px;
+        height: 24px; } }
+  .footer__content__community li + li {
+    margin-left: 32px; }
+  .footer__content__community .facebook {
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-fb.svg") center/cover; }
+  .footer__content__community .instagram {
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-ig.svg") center/cover; }
+  .footer__content__community .line {
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/102c91f7b3d8e08005073f54b3283b09a18dc427/week3/icon-line.svg") center/cover; }
+
+/* footer 第二列 .footer__appendix 附註區 */
+.footer__appendix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (max-width: 767px) {
+    .footer__appendix {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+/* footer 第二列 第一欄 copyright */
+.footer__appendix__copyright {
+  font-size: 16px;
+  line-height: 24px; }
+
+/* footer 第二列 第二欄 rules 政策條款區 */
+.footer__appendix__rules {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 767px) {
+    .footer__appendix__rules {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .footer__appendix__rules li + li {
+    margin-left: 48px; }
+    @media (max-width: 767px) {
+      .footer__appendix__rules li + li {
+        margin-left: 0px; } }
+  .footer__appendix__rules a {
+    color: #FFF;
+    font-size: 14px;
+    line-height: 21px; }
 
 /* Pages */
-/* banner 大圖區 */
-.banner {
+/* 首頁 banner 大圖區 .home-banner */
+.home-banner {
   height: calc(100vh - 109px);
   background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") center/cover;
   color: #650300; }
-  .banner .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: calc(100vh - 109px);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    max-width: 1110px;
-    margin: 0 auto; }
+
+/* 首頁 banner 大圖區 文字內容 .home-banner__content*/
+.home-banner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(100vh - 109px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  max-width: 1110px;
+  margin: 0 auto; }
+  @media (max-width: 996px) {
+    .home-banner__content {
+      max-width: 690px;
+      margin: 0 auto; } }
+  @media (max-width: 767px) {
+    .home-banner__content {
+      max-width: 345px;
+      margin: 0 auto; } }
+  .home-banner__content h2 {
+    font-size: 64px;
+    line-height: 96px; }
     @media (max-width: 996px) {
-      .banner .content {
-        max-width: 690px;
-        margin: 0 auto; } }
+      .home-banner__content h2 {
+        font-size: 48px;
+        line-height: 72px; } }
     @media (max-width: 767px) {
-      .banner .content {
-        max-width: 345px;
-        margin: 0 auto; } }
-    .banner .content h2 {
-      font-size: 64px;
-      line-height: 96px; }
-      @media (max-width: 996px) {
-        .banner .content h2 {
-          font-size: 48px;
-          line-height: 72px; } }
-      @media (max-width: 767px) {
-        .banner .content h2 {
-          font-size: 32px; } }
-    .banner .content h3 {
-      font-size: 36px;
-      line-height: 54px; }
-      @media (max-width: 996px) {
-        .banner .content h3 {
-          font-size: 20px;
-          line-height: 30px; } }
-      @media (max-width: 767px) {
-        .banner .content h3 {
-          font-size: 16px; } }
+      .home-banner__content h2 {
+        font-size: 32px; } }
+  .home-banner__content h3 {
+    font-size: 36px;
+    line-height: 54px; }
+    @media (max-width: 996px) {
+      .home-banner__content h3 {
+        font-size: 20px;
+        line-height: 30px; } }
+    @media (max-width: 767px) {
+      .home-banner__content h3 {
+        font-size: 16px; } }
 
 /* Blog 部落格 */
-/* Blog 第一層 副導覽列 */
+/* Blog 第一層 副導覽列 基本設定*/
 .blog__subNavbar {
   background-color: #650300; }
   @media (max-width: 767px) {
     .blog__subNavbar {
       display: none; } }
-  .blog__subNavbar .subNavbar__wrap {
+  .blog__subNavbar .wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -326,32 +338,37 @@ header, footer {
     max-width: 1110px;
     margin: 0 auto; }
     @media (max-width: 996px) {
-      .blog__subNavbar .subNavbar__wrap {
+      .blog__subNavbar .wrap {
         max-width: 690px;
         margin: 0 auto; } }
-    .blog__subNavbar .subNavbar__wrap ul.navList {
-      /* Blog 副導覽列的 .navList */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-    .blog__subNavbar .subNavbar__wrap li a {
-      display: block;
-      color: #FFF;
-      font-size: 20px;
-      line-height: 24px;
-      padding: 12px 0; }
-      @media (max-width: 996px) {
-        .blog__subNavbar .subNavbar__wrap li a {
-          font-size: 16px;
-          padding: 16px 0; } }
-    .blog__subNavbar .subNavbar__wrap li + li {
-      margin-left: 48px; }
-      @media (max-width: 996px) {
-        .blog__subNavbar .subNavbar__wrap li + li {
-          margin-left: 32px; } }
-    .blog__subNavbar .subNavbar__wrap span {
-      color: #FFF;
-      font-size: 30px; }
+
+/* Blog 第一層 副導覽列 */
+/* Blog 副導覽列的 navList */
+ul.blog__subNavbar__navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+li a {
+  display: block;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 12px 0; }
+  @media (max-width: 996px) {
+    li a {
+      font-size: 16px;
+      padding: 16px 0; } }
+
+li + li {
+  margin-left: 48px; }
+  @media (max-width: 996px) {
+    li + li {
+      margin-left: 32px; } }
+
+span {
+  color: #FFF;
+  font-size: 30px; }
 
 /* Blog 第二層 主要內容區 .blog__main */
 .blog__main {
@@ -381,33 +398,33 @@ header, footer {
 /* Blog 第二層 主要內容區 .blog__main */
 /* 文章區塊 .blog__main__articles */
 /* Blog 第二層 主要內容區 .blog__main */
-/* 分頁導覽列 .pagination */
-ul.pagination {
+/* 分頁導覽列 .blog__main__pagination */
+ul.blog__main__pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  ul.pagination li a {
+  ul.blog__main__pagination li a {
     display: block;
     border: 1px solid #555555;
     color: #555555; }
-    ul.pagination li a.active {
+    ul.blog__main__pagination li a.active {
       background-color: #000; }
-  ul.pagination li:first-child a, ul.pagination li:last-child a {
+  ul.blog__main__pagination li:first-child a, ul.blog__main__pagination li:last-child a {
     font-size: 19px;
     line-height: 29px;
     padding: 11px 12px;
     background-color: #F2F2F2; }
     @media (max-width: 767px) {
-      ul.pagination li:first-child a, ul.pagination li:last-child a {
+      ul.blog__main__pagination li:first-child a, ul.blog__main__pagination li:last-child a {
         font-size: 14px;
         line-height: 26px;
         padding: 10px 10px; } }
-  ul.pagination li a {
+  ul.blog__main__pagination li a {
     font-size: 18px;
     line-height: 27px;
     padding: 12px 16px; }
     @media (max-width: 767px) {
-      ul.pagination li a {
+      ul.blog__main__pagination li a {
         font-size: 16px;
         line-height: 22px;
         padding: 12px 15px; } }
