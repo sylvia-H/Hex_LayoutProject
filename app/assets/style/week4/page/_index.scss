@@ -2,7 +2,6 @@
 .home-banner{
     height: calc(100vh - 109px);
     background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") center/cover;
-    color: #650300;
 }
 
 /* 首頁 banner 大圖區 文字內容 .home-banner__content*/
@@ -12,6 +11,7 @@
     height: calc(100vh - 109px);
     justify-content: center;
     align-items: flex-end;
+    color: $sub-red;
     @include wrap__1110;
     @include Pad(){
         @include wrap__690;
@@ -22,6 +22,7 @@
     h2{
         font-size: 64px;
         line-height: 96px;
+        font-weight: bold;
         @include Pad(){
             font-size: 48px;
             line-height: 72px;

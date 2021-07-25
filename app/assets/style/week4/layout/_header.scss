@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,900&display=swap');
-
 /* 全局設定 */
 body{
     font-family: 'Roboto','Noto Sans TC',sans-serif;
@@ -12,7 +10,7 @@ a{
 }
 
 header,footer{
-    background-color: #AA0601;
+    background-color: $main-red;
 }
 
 /* 頁首 header 第一層 .header */
