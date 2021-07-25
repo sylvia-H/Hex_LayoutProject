@@ -114,15 +114,18 @@ ul.blog__main__articles{
         }
     }
     .articles__item__content{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         width: 40%;
         @include Pad(){
            width: 50%;
         }
         @include Phone(){
             width: 100%;
+        }
+        .title{
+            margin-bottom: 24px;
+            @include Pad(){
+                margin-bottom: 32px;
+            }
         }
         h3{
             color: $sub-red;
