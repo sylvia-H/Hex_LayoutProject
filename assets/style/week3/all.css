@@ -1,10 +1,11 @@
 @charset "UTF-8";
 /* Setting*/
+/*色碼管理*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -268,8 +269,7 @@ ul.footer__content__main__contact {
 /* 首頁 banner 大圖區 .home-banner */
 .home-banner {
   height: calc(100vh - 109px);
-  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") center/cover;
-  color: #650300; }
+  background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png") center/cover; }
 
 /* 首頁 banner 大圖區 文字內容 .home-banner__content*/
 .home-banner__content {
@@ -287,6 +287,7 @@ ul.footer__content__main__contact {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  color: #650300;
   max-width: 1110px;
   margin: 0 auto; }
   @media (max-width: 996px) {
@@ -299,7 +300,8 @@ ul.footer__content__main__contact {
       margin: 0 auto; } }
   .home-banner__content h2 {
     font-size: 64px;
-    line-height: 96px; }
+    line-height: 96px;
+    font-weight: bold; }
     @media (max-width: 996px) {
       .home-banner__content h2 {
         font-size: 48px;
@@ -394,12 +396,148 @@ ul.blog__subNavbar__navList {
 
 /* Blog 第二層 主要內容區 .blog__main */
 /* 文章區塊 .blog__main__articles */
+ul.blog__main__articles {
+  max-width: 1110px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 96px; }
+  @media (max-width: 996px) {
+    ul.blog__main__articles {
+      max-width: 690px;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 64px; } }
+  @media (max-width: 767px) {
+    ul.blog__main__articles {
+      max-width: 345px;
+      margin: 0 auto;
+      margin-top: 28px;
+      margin-bottom: 40px; } }
+
+/* 文章單元區塊 .blog__main__articles__item */
+/* 內含兩欄：圖片+內文*/
+.blog__main__articles__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px; }
+  @media (max-width: 996px) {
+    .blog__main__articles__item {
+      margin-bottom: 24px; } }
+  @media (max-width: 767px) {
+    .blog__main__articles__item {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-bottom: 20px; } }
+  .blog__main__articles__item .articles__item__titlePic {
+    width: 57%; }
+    @media (max-width: 996px) {
+      .blog__main__articles__item .articles__item__titlePic {
+        width: 47%; } }
+    @media (max-width: 767px) {
+      .blog__main__articles__item .articles__item__titlePic {
+        width: 100%;
+        margin-bottom: 8px; } }
+    .blog__main__articles__item .articles__item__titlePic img {
+      width: 100%;
+      height: 100%; }
+  .blog__main__articles__item .articles__item__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 40%; }
+    @media (max-width: 996px) {
+      .blog__main__articles__item .articles__item__content {
+        width: 50%; } }
+    @media (max-width: 767px) {
+      .blog__main__articles__item .articles__item__content {
+        width: 100%; } }
+    .blog__main__articles__item .articles__item__content h3 {
+      color: #650300;
+      font-size: 32px;
+      line-height: 63px; }
+      @media (max-width: 996px) {
+        .blog__main__articles__item .articles__item__content h3 {
+          font-size: 20px;
+          line-height: 30px; } }
+      @media (max-width: 767px) {
+        .blog__main__articles__item .articles__item__content h3 {
+          font-size: 16px;
+          line-height: 24px; } }
+    .blog__main__articles__item .articles__item__content h4 {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 500;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      @media (max-width: 996px) {
+        .blog__main__articles__item .articles__item__content h4 {
+          font-size: 16px;
+          line-height: 30px; } }
+      @media (max-width: 767px) {
+        .blog__main__articles__item .articles__item__content h4 {
+          font-size: 14px;
+          line-height: 24px; } }
+      .blog__main__articles__item .articles__item__content h4 span {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500; }
+        @media (max-width: 996px) {
+          .blog__main__articles__item .articles__item__content h4 span {
+            font-size: 14px;
+            line-height: 24px; } }
+    .blog__main__articles__item .articles__item__content p {
+      font-size: 20px;
+      line-height: 30px;
+      color: #555555; }
+      @media (max-width: 996px) {
+        .blog__main__articles__item .articles__item__content p {
+          font-size: 14px;
+          line-height: 21px; } }
+      @media (max-width: 767px) {
+        .blog__main__articles__item .articles__item__content p {
+          display: none; } }
+      .blog__main__articles__item .articles__item__content p a {
+        display: block;
+        margin-top: 14px;
+        text-align: right;
+        font-size: 36px;
+        line-height: 54px;
+        color: #650300;
+        font-weight: 900; }
+        @media (max-width: 996px) {
+          .blog__main__articles__item .articles__item__content p a {
+            display: inline;
+            margin-top: 0;
+            font-size: 14px;
+            line-height: 21px;
+            color: #555555; } }
+
 /* Blog 第二層 主要內容區 .blog__main */
 /* 分頁導覽列 .blog__main__pagination */
 ul.blog__main__pagination {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   ul.blog__main__pagination li a {
     display: block;
     border: 1px solid #555555;
