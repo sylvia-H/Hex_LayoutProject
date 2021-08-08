@@ -1,3 +1,27 @@
+// fonts 文字管理
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap');
+
+$font-roboto:'Roboto', sans-serif;
+$font-notoTC:'Noto Sans TC', sans-serif;
+
+$fz-root: 2px;
+$fw-code:"n","l","b","bk";
+$font-weight-base:(
+    "n":normal,
+    "l":lighter,
+    "b":bold,
+    "bk":bolder,
+);
+
+$text-align:"l","c","r";
+$text-align-base:(
+    "l":left,
+    "c":center,
+    "r":right
+);
+
+
 // 色碼管理
 $main-red:#AA0601;
 $sub-red:#650300;
@@ -33,4 +57,30 @@ $padding-direction-base:(
     "r":"right",
     "b":"bottom",
     "l":"left"
+);
+
+// display
+$display: none,block,inline-block,flex,inline-flex,table;
+
+
+// flex 管理
+$flex-direction: row,column,row-reverse,column-reverse;
+
+$flex-wrap:"w","nw","wr";
+$flex-wrap-base:(
+    "w":wrap,
+    "nw":nowrap,
+    "wr":wrap-reverse
+);
+
+$justify-content:"fs","fe","c","sb","sa","se","stretch","baseline";
+$justify-content-base:(
+    "fs":flex-start,
+    "fe":flex-end,
+    "c":center,
+    "sb":space-between,
+    "sa":space-around,
+    "se":space-evenly,
+    "stretch":stretch,
+    "baseline":baseline
 );

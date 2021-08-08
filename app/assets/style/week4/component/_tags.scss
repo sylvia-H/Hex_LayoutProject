@@ -8,7 +8,7 @@
     li{
         font-size: 24px;
         line-height: 36px;
-        font-weight: $fw-bold;
+        font-weight: bold;
         @include Pad(){
             font-size: 16px;
             line-height: 36px;
@@ -29,7 +29,7 @@
     display: flex;
     align-items: center;
     color: $main-red;
-    font-weight: $fw-bold;
+    font-weight: bold;
     font-size: 28px;
     line-height: 42px;
     @include Pad(){

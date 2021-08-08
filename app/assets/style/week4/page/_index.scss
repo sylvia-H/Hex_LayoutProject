@@ -12,13 +12,6 @@
     justify-content: center;
     align-items: flex-end;
     color: $sub-red;
-    @include wrap__1110;
-    @include Pad(){
-        @include wrap__690;
-    }
-    @include Phone(){
-        @include wrap__345;
-    }
     h2{
         font-size: 64px;
         line-height: 96px;
@@ -40,6 +33,26 @@
         }
         @include Phone(){
             font-size: 16px;
+        }
+    }
+}
+
+/* 首頁 slogan 標語區 .slogan */
+.slogan{
+    background-color: #AA06010D;
+    color: $sub-red;
+    p{
+        color: #000;
+    }
+    &__items{
+        li{
+            width: 23%;
+            @include Pad(){
+                width: 37%;
+            }
+            @include Phone(){
+                width: 100%;
+            }
         }
     }
 }

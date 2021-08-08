@@ -1,0 +1,81 @@
+/* Display */
+@each $d in $display {
+    .d-#{$d}{
+        display: $d;
+    }
+}
+
+@each $d in $display {
+    @each $rwd in $rwd-reakpoints {
+        @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
+            .d-#{$rwd}-#{$d}{
+                display: $d;
+            }
+        }
+    }
+}
+
+/* Flex */
+/* Flex Direction */
+@each $fd in $flex-direction {
+    .fd-#{$fd}{
+        display: $fd;
+    }
+}
+
+@each $fd in $flex-direction {
+    @each $rwd in $rwd-reakpoints {
+        @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
+            .fd-#{$rwd}-#{$fd}{
+                display: $fd;
+            }
+        }
+    }
+}
+
+/* Flex Wrap */
+@each $fxw in $flex-wrap {
+    .fxw-#{$fxw}{
+        flex-wrap: map-get($flex-wrap-base, $fxw);
+    }
+}
+
+@each $fxw in $flex-wrap {
+    @each $rwd in $rwd-reakpoints {
+        @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
+            .fxw-#{$rwd}-#{$fxw}{
+                flex-wrap: map-get($flex-wrap-base, $fxw);
+            }
+        }
+    }
+}
+
+/* justify-content */
+/* align-items */
+@each $jc in $justify-content {
+    .jc-#{$jc}{
+        justify-content: map-get($justify-content-base, $jc);
+    }
+    .ai-#{$jc}{
+        align-items: map-get($justify-content-base, $jc);
+    }
+    .ac-#{$jc}{
+        align-content: map-get($justify-content-base, $jc);
+    }
+}
+
+@each $jc in $justify-content {
+    @each $rwd in $rwd-reakpoints {
+        @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
+            .jc-#{$rwd}-#{$jc}{
+                justify-content: map-get($justify-content-base, $jc);
+            }
+            .ai-#{$rwd}-#{$jc}{
+                align-items: map-get($justify-content-base, $jc);
+            }
+            .ac-#{$rwd}-#{$jc}{
+                align-content: map-get($justify-content-base, $jc);
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 /* Spacing - margin */
 @each $d in $margin-direction {
-    @for $i from 1 through 50{
+    @for $i from 0 through 50{
         .m#{$d}-#{$i*4}{
             margin-#{map-get($margin-direction-base, $d)}: $spacer * $i;
         }
@@ -9,7 +9,7 @@
 
 @each $d in $margin-direction {
     @each $rwd in $rwd-reakpoints {
-        @for $i from 1 through 50{
+        @for $i from 0 through 50{
             @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
                 .m#{$d}-#{$rwd}-#{$i*4}{
                     margin-#{map-get($margin-direction-base, $d)}: $spacer * $i;
@@ -21,7 +21,7 @@
 
 /* Spacing - pading */
 @each $d in $padding-direction {
-    @for $i from 1 through 50{
+    @for $i from 0 through 50{
         .p#{$d}-#{$i*4}{
             padding-#{map-get($padding-direction-base, $d)}: $spacer * $i;
         }
@@ -30,7 +30,7 @@
 
 @each $d in $padding-direction {
     @each $rwd in $rwd-reakpoints {
-        @for $i from 1 through 50{
+        @for $i from 0 through 50{
             @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
                 .p#{$d}-#{$rwd}-#{$i*4}{
                     padding-#{map-get($padding-direction-base, $d)}: $spacer * $i;

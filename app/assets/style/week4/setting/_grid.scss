@@ -30,3 +30,14 @@
     max-width: 345px;
     margin: 0 auto;
 }
+
+// container
+.container{
+    @include wrap__1110;
+    @include Pad(){
+        @include wrap__690;
+    }
+    @include Phone(){
+        @include wrap__345;
+    }
+}

@@ -2,12 +2,13 @@
 @import "./setting/variable";
 @import "./setting/reset";
 @import "./setting/grid";
-@import "./setting/fonts";
 @import "./setting/base";
 
 /* helper */
 @import "./helper/helper";
 @import "./helper/spacing";
+@import "./helper/flex";
+@import "./helper/fonts";
 
 /* Component */
 @import "./component/pagination";
@@ -26,6 +27,3 @@
 @import "./page/index";
 @import "./page/blog";
 @import "./page/blog-special";
-
-/* Util */
-@import "./component/util";
