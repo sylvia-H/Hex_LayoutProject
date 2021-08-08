@@ -1,0 +1,53 @@
+/* Blog 部落格 */
+/* Blog 第一層 副導覽列 基本設定*/
+.blog__subNavbar{
+    background-color: $sub-red;
+    @include Phone(){
+        display: none;
+    }
+    .wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include wrap__1110;
+        @include Pad(){
+            @include wrap__690;
+        }
+    }
+    span{
+        color: #FFF;
+        font-size: 30px;
+    }
+}
+
+/* Blog 第一層 副導覽列 */
+/* Blog 副導覽列的 navList */
+ul.blog__subNavbar__navList{
+    display: flex;
+    li a{
+        display: block;
+        color: #FFF;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 12px 0;
+        @include Pad(){
+            font-size: 16px;
+            padding: 16px 0;
+        }
+        &::after{
+            content: '';
+            display: block;
+            background: #ccc;
+            width: 0;
+            height: 2px;
+            transition: width .3s;
+        }
+        &:hover::after { width: 100%; }
+    }
+    li+li{
+        margin-left: 48px;
+        @include Pad(){
+            margin-left: 32px;
+        }
+    }
+}

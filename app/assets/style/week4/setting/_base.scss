@@ -1,0 +1,30 @@
+/* 自定義 reset */
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+    vertical-align: middle;
+}
+
+/* 全局設定 */
+body{
+    font-family: 'Roboto','Noto Sans TC',sans-serif;
+}
+
+a{
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+header,footer{
+    background-color: $main-red;
+}

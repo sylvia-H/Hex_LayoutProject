@@ -1,0 +1,105 @@
+/* Blog-Special 特別企劃頁 */
+/* 主要內容區 .blog__content */
+.blog__content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include wrap__1110;
+    margin-top: 8px;
+    margin-bottom: 160px;
+    @include Pad(){
+        @include wrap__690;
+        margin-top: 8px;
+        margin-bottom: 96px;
+    }
+    @include Phone(){
+        @include wrap__345;
+        margin-top: 8px;
+        margin-bottom: 56px;
+    }
+}
+
+
+/* 主要內容區左邊 .blog__content-main */
+.blog__content-title{
+    width: 100%;
+}
+
+.blog__content-main{
+    width: 74%;
+    @include Phone(){
+        width: 100%;
+    }
+    h2{
+        font-size: 48px;
+        line-height: 95px;
+        @include Pad(){
+            font-size: 32px;
+        }
+        @include Phone(){
+            font-size: 20px;
+            line-height: 30px;
+            color: $sub-red;
+        }
+    }
+    h3{
+        font-size: 28px;
+        line-height: 42px;
+        font-weight: $fw-m;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include Pad(){
+            font-size: 16px;
+        }
+        @include Phone(){
+            font-size: 14px;
+            line-height: 21px;
+        }
+        span{
+            font-size: 16px;
+            line-height: 24px;
+            color: $sub-gray;
+            @include Pad(){
+                font-size: 14px;
+            }
+        }
+    }
+    img{
+        margin-bottom: 24px;
+    }
+    p{
+        color: $para-black;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 40px;
+    }
+}
+
+.shareList{
+    display: flex;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: $fw-bold;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #707070;
+    @include Pad(){
+        font-size: 16px;
+    }
+    @include Phone(){
+        padding-bottom: 16px;
+    }
+    li+li{
+        margin-left: 16px;
+    }
+}
+
+
+
+/* 主要內容區右邊 .blog__content-side */
+.blog__content-side{
+    width: 23%;
+    @include Phone(){
+        width: 100%;
+    }
+}

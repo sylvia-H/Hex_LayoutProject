@@ -1,0 +1,34 @@
+.select{
+    border: 1px solid #CED4DA;
+    height: 45px;
+    width: 324px;
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 19px;
+    color: $select-gray;
+    &-label{
+        font-size: 24px;
+        line-height: 30px;
+        margin-right: 20px;
+    }
+    @include Pad(){
+        height: 46px;
+        width: 237px;
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 16px;
+        &-label{
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+    @include Phone(){
+        height: 36px;
+        width: 270px;
+        font-size: 14px;
+        &-label{
+            font-size: 14px;
+            margin-right: 12px;
+        }
+    }
+}

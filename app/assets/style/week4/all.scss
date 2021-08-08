@@ -3,18 +3,29 @@
 @import "./setting/reset";
 @import "./setting/grid";
 @import "./setting/fonts";
-@import "./setting/mixin";
+@import "./setting/base";
+
+/* helper */
+@import "./helper/helper";
+@import "./helper/spacing";
 
 /* Component */
-@import "./component/section-mixin";
+@import "./component/pagination";
+@import "./component/breadcrumb";
+@import "./component/tags";
+@import "./component/select";
+@import "./component/card";
 
 /* Layout*/
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/content";
+@import "./layout/blog";
 
 /* Pages */
 @import "./page/index";
 @import "./page/blog";
+@import "./page/blog-special";
 
 /* Util */
 @import "./component/util";

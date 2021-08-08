@@ -1,5 +1,36 @@
-/*色碼管理*/
+// 色碼管理
 $main-red:#AA0601;
 $sub-red:#650300;
 $tag-red:#9F1213;
+
 $main-gray:#555555;
+$sub-gray:#6C6C6C;
+$select-gray:#495057;
+
+$para-black:#0A0A0A;
+$card-black:#212529;
+
+// spacing 管理
+$spacer: 4px;
+$rwd-reakpoints:"xl","lg","md","sm","xs";
+$rwd-reakpoint-base:(
+    "xl":1200px,
+    "lg":992px,
+    "md":768px,
+    "sm":576px,
+    "xs":0
+);
+$margin-direction:"t","r","b","l";
+$margin-direction-base:(
+    "t":"top",
+    "r":"right",
+    "b":"bottom",
+    "l":"left"
+);
+$padding-direction:"t","r","b","l";
+$padding-direction-base:(
+    "t":"top",
+    "r":"right",
+    "b":"bottom",
+    "l":"left"
+);

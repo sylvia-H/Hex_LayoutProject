@@ -1,0 +1,73 @@
+/* 標籤列 tags 元件 */
+@mixin tags{
+    display: flex;
+    flex-wrap: wrap;
+    *{
+        color: $main-red;
+    }
+    li{
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: $fw-bold;
+        @include Pad(){
+            font-size: 16px;
+            line-height: 36px;
+        }
+        @include Phone(){
+            font-size: 14px;
+            line-height: 36px;
+        }
+        &:before{
+            content: "#";
+        }
+    }
+}
+
+
+/* 標籤列 tags 標題 .tags__title */
+.tags__title, .tags__title span{
+    display: flex;
+    align-items: center;
+    color: $main-red;
+    font-weight: $fw-bold;
+    font-size: 28px;
+    line-height: 42px;
+    @include Pad(){
+        font-size: 20px;
+    }
+    span{
+        margin-right: 12px;
+        @include Pad(){
+            margin-right: 2px;
+        }
+    }
+}
+
+/* 頁首標籤列 tags 元件 .tags-top */
+ul.tags-top{
+    @include tags;
+    li{
+        margin-right: 16px;
+        @include Pad(){
+            margin-right: 8px;
+        }
+        @include Phone(){
+            margin-right: 4px;
+        }
+    }
+}
+
+/* 側邊欄標籤列 tags 元件 .tags-side */
+ul.tags-side{
+    @include tags;
+    height: fit-content;
+    li{
+        margin-right: 24px;
+        @include Pad(){
+            margin-right: 16px;
+        }
+        @include Phone(){
+            margin-right: 8px;
+        }
+    }
+}

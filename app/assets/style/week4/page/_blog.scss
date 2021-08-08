@@ -1,76 +1,6 @@
 /* Blog 部落格 */
-/* Blog 第一層 副導覽列 基本設定*/
-.blog__subNavbar{
-    background-color: $sub-red;
-    @include Phone(){
-        display: none;
-    }
-    .wrap{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        @include wrap__1110;
-        @include Pad(){
-            @include wrap__690;
-        }
-    }
-    span{
-        color: #FFF;
-        font-size: 30px;
-    }
-}
-
-/* Blog 第一層 副導覽列 */
-/* Blog 副導覽列的 navList */
-ul.blog__subNavbar__navList{
-    display: flex;
-    li a{
-        display: block;
-        color: #FFF;
-        font-size: 20px;
-        line-height: 24px;
-        padding: 12px 0;
-        @include Pad(){
-            font-size: 16px;
-            padding: 16px 0;
-        }
-    }
-    li+li{
-        margin-left: 48px;
-        @include Pad(){
-            margin-left: 32px;
-        }
-    }
-}
-
-
-/* Blog 第二層 主要內容區 .blog__main */
-.blog__main{
-    @include wrap__1110;
-    margin-top: 40px;
-    margin-bottom: 160px;
-    @include Pad(){
-        @include wrap__690;
-        margin-top: 32px;
-        margin-bottom: 96px;
-    }
-    @include Phone(){
-        @include wrap__345;
-        margin-top: 28px;
-        margin-bottom: 56px;
-    }
-    h2{
-        font-size: 48px;
-        line-height: 80px;
-        font-weight: bold;
-        padding-left: 16px;
-        border-left: 16px solid $tag-red;
-    }
-}
-
-/* Blog 第二層 主要內容區 .blog__main */
-/* 文章區塊 .blog__main__articles */
-ul.blog__main__articles{
+/* 文章區塊 .blog__articles */
+.blog__articles{
     @include wrap__1110;
     margin-top: 60px;
     margin-bottom: 96px;
@@ -86,9 +16,9 @@ ul.blog__main__articles{
     }
 }
 
-/* 文章單元區塊 .blog__main__articles__item */
+/* 文章單元區塊 .blog__articles__item */
 /* 內含兩欄：圖片+內文*/
-.blog__main__articles__item{
+.blog__articles__item{
     display: flex;
     justify-content: space-between;
     margin-bottom: 60px;
@@ -196,11 +126,4 @@ ul.blog__main__articles{
             }
         }
     }
-}
-
-
-/* Blog 第二層 主要內容區 .blog__main */
-/* 分頁導覽列 .blog__main__pagination */
-ul.blog__main__pagination{
-    @include pagination;
 }
