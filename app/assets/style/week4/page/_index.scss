@@ -39,7 +39,7 @@
 
 /* 首頁 slogan 標語區 .slogan */
 .slogan{
-    background-color: #AA06010D;
+    background-color: #FBF2F2;
     color: $sub-red;
     p{
         color: #000;
@@ -53,6 +53,145 @@
             @include Phone(){
                 width: 100%;
             }
+        }
+    }
+}
+
+/* 首頁 classic 經典系列鏡框 .classic */
+.classic{
+    color: $sub-red;
+    &__items{
+        color: $main-red;
+        a{
+            width: 57%;
+            @include Phone(){
+                width: 100%;
+                height: 134px;
+            }
+        }
+    }
+}
+
+/* 首頁 coBrand 聯名設計 .coBrand */
+.coBrand{
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/bg.png") center/cover;
+    li{
+        width: 47.5%;
+        height: 455px;
+        @include Pad(){
+            height: 278px;
+        }
+        @include Phone(){
+            width: 100%;
+            height: 290px;
+        }
+    }
+    li:first-child{
+        position: relative;
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-8.png") center/cover;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.5;
+        }
+    }
+    li:last-child{
+        position: relative;
+        background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-9.png") center/cover;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            opacity: 0.5;
+        }
+    }
+    h3{
+        color: #fff;
+    }
+    h4{
+        color: $main-red;
+    }
+}
+
+.recommand{
+    h3{
+        color: $sub-red;
+    }
+}
+
+
+/* 首頁 contact 聯絡我們表單區 .contact */
+.contact{
+    background-color: #FBF2F2;
+    label{
+        font-size: 16px;
+        line-height: 24px;
+        @include Pad(){
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    input{
+        border: 1px solid #000000;
+        border-radius: 3px;
+        background-color: #FBF2F2;
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+        line-height: 24px;
+        @include Pad(){
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    textarea{
+        border: 1px solid #000000;
+        border-radius: 5px;
+        background-color: #FBF2F2;
+        width: 100%;
+        height: 120px;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 16px;
+        @include Pad(){
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    
+    input[type="checkbox"]{
+        border: 1px solid #000000;
+        border-radius: 0px;
+        background-color: #FBF2F2;
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+        line-height: 24px;
+        @include Pad(){
+            font-size: 14px;
+            line-height: 21px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+    
+    input[type="submit"]{
+        border: 0px;
+        border-radius: 0px;
+        background-color: $main-red;
+        color: #fff;
+        width: 350px;
+        height: 50px;
+        @include Pad(){
+            width: 210px;
+        }
+        @include Phone(){
+            width: 160px;
         }
     }
 }

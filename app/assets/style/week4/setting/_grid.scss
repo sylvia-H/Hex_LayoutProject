@@ -41,3 +41,16 @@
         @include wrap__345;
     }
 }
+
+
+.container-730{
+    max-width: 730px;
+    margin: 0 auto;
+    @include Pad(){
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    @include Phone(){
+        @include wrap__345;
+    }
+}

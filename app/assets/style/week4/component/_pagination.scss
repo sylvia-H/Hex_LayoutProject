@@ -9,12 +9,14 @@
         &.active{
             background-color: #000;
         }
+        &:hover{
+            background-color: #F2F2F2;
+        }
     }
     li:first-child a, li:last-child a{
         font-size: 19px;
         line-height: 29px;
         padding: 11px 12px;
-        background-color: #F2F2F2;
         @include Phone(){
             font-size: 14px;
             line-height: 26px;

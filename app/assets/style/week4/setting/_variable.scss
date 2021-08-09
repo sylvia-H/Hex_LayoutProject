@@ -1,11 +1,11 @@
 // fonts 文字管理
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 $font-roboto:'Roboto', sans-serif;
 $font-notoTC:'Noto Sans TC', sans-serif;
 
-$fz-root: 2px;
+$fz-root: 1px;
 $fw-code:"n","l","b","bk";
 $font-weight-base:(
     "n":normal,
@@ -23,6 +23,9 @@ $text-align-base:(
 
 
 // 色碼管理
+$basic-color:"000","fff","f00","0f0","00f";
+$gray-color:"333","666","999","aaa","bbb","ccc","ddd","eee";
+
 $main-red:#AA0601;
 $sub-red:#650300;
 $tag-red:#9F1213;
@@ -31,11 +34,12 @@ $main-gray:#555555;
 $sub-gray:#6C6C6C;
 $select-gray:#495057;
 
+$main-black:#000;
 $para-black:#0A0A0A;
 $card-black:#212529;
 
 // spacing 管理
-$spacer: 4px;
+$spacer: 2px;
 $rwd-reakpoints:"xl","lg","md","sm","xs";
 $rwd-reakpoint-base:(
     "xl":1200px,
@@ -61,6 +65,15 @@ $padding-direction-base:(
 
 // display
 $display: none,block,inline-block,flex,inline-flex,table;
+
+// position
+$position: "s","a","r","f";
+$position-base:(
+    "s":static,
+    "a":absolute,
+    "r":relative,
+    "f":fixed
+);
 
 
 // flex 管理

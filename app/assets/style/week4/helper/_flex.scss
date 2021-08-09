@@ -15,11 +15,29 @@
     }
 }
 
+/* Position */
+@each $p in $position {
+    .pos-#{$p}{
+        position: map-get($position-base, $p);
+    }
+}
+
+@each $p in $position {
+    @each $rwd in $rwd-reakpoints {
+        @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
+            .pos-#{$rwd}-#{$p}{
+                position: map-get($position-base, $p);
+            }
+        }
+    }
+}
+
+
 /* Flex */
 /* Flex Direction */
 @each $fd in $flex-direction {
     .fd-#{$fd}{
-        display: $fd;
+        flex-direction: $fd;
     }
 }
 
@@ -27,7 +45,7 @@
     @each $rwd in $rwd-reakpoints {
         @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
             .fd-#{$rwd}-#{$fd}{
-                display: $fd;
+                flex-direction: $fd;
             }
         }
     }
