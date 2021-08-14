@@ -28,3 +28,7 @@ a{
 header,footer{
     background-color: $main-red;
 }
+
+input[type="submit"]{
+    cursor: pointer
+}

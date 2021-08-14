@@ -34,21 +34,25 @@
 }
 
 ul.Products__OP{
-    max-height: 880px;
-    overflow: hidden;
-    @include Pad(){
-        max-height: 1388px;
-    }
-    @include Phone(){
-        max-height: 695px;
-    }
     li{
         width: 23%;
         @include Pad(){
             width: 47.5%;
+            display: none;
+            @for $i from 1 through 10{
+                &:nth-child(#{$i}){
+                    display: block;
+                }
+            }
         }
         @include Phone(){
             width: 100%;
+            display: none;
+            @for $i from 1 through 3{
+                &:nth-child(#{$i}){
+                    display: block;
+                }
+            }
         }
     }
     .OP-img{
@@ -86,14 +90,6 @@ ul.Products__OP{
 
 
 ul.Products__SUN{
-    max-height: 880px;
-    overflow: hidden;
-    @include Pad(){
-        max-height: 804px;
-    }
-    @include Phone(){
-        max-height: 695px;
-    }
     li{
         width: 31.5%;
         @include Pad(){
@@ -101,6 +97,12 @@ ul.Products__SUN{
         }
         @include Phone(){
             width: 100%;
+            display: none;
+            @for $i from 1 through 3{
+                &:nth-child(#{$i}){
+                    display: block;
+                }
+            }
         }
     }
     .OP-img{

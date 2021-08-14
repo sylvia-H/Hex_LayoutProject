@@ -1,14 +1,20 @@
-/* Setting*/
-@import "./setting/variable";
-@import "./setting/reset";
-@import "./setting/grid";
-@import "./setting/base";
+// 依據 Sass 7-1 Pattern 重新規劃結構
+// https://gist.github.com/rveitch/84cea9650092119527bc
 
-/* helper */
-@import "./helper/helper";
-@import "./helper/spacing";
-@import "./helper/flex";
-@import "./helper/fonts";
+/* Variable */
+@import "./utils/variable";
+
+/* Base */
+@import "./base/reset";
+@import "./base/base";
+
+/* Utils */
+@import "./utils/mixin";
+@import "./utils/helper";
+@import "./utils/flex";
+@import "./utils/spacing";
+@import "./utils/grid";
+@import "./utils/fonts";
 
 /* Component */
 @import "./component/pagination";

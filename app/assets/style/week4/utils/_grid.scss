@@ -1,0 +1,49 @@
+// container
+.container{
+    @include wrap__1110;
+    @include Pad(){
+        @include wrap__690;
+    }
+    @include Phone(){
+        @include wrap__345;
+    }
+}
+
+// col
+$grid-columns: 12;
+.col {
+  @for $i from 1 through ($grid-columns) {
+    &-#{$i} {
+      width: percentage($i / $grid-columns);
+      margin: 0 auto;
+    }
+  }
+  @each $rwd in $rwd-reakpoints {
+      @for $i from 1 through ($grid-columns) {
+        @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
+          &-#{$rwd}-#{$i} {
+            width: percentage($i / $grid-columns);
+            margin: 0 auto;
+          }
+        }
+      }
+  }
+}
+
+// col-offset
+.col-offset {
+  @for $i from 1 through ($grid-columns) {
+    &-#{$i} {
+      margin-left: percentage($i / $grid-columns);
+    }
+  }
+  @each $rwd in $rwd-reakpoints {
+      @for $i from 1 through ($grid-columns) {
+        @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
+          &-#{$rwd}-#{$i} {
+            margin-left: percentage($i / $grid-columns);
+          }
+        }
+      }
+  }
+}

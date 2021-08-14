@@ -1,14 +1,14 @@
 /* Spacing - margin */
 @for $i from 0 through 100{
     .m-#{$i*2}{
-        margin: $spacer * $i;
+        margin: $spacer * $i !important;
     }
 }
 
 @each $d in $margin-direction {
     @for $i from 0 through 100{
         .m#{$d}-#{$i*2}{
-            margin-#{map-get($margin-direction-base, $d)}: $spacer * $i;
+            margin-#{map-get($margin-direction-base, $d)}: $spacer * $i !important;
         }
     }
 }
@@ -18,24 +18,24 @@
         @for $i from 0 through 100{
             @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
                 .m#{$d}-#{$rwd}-#{$i*2}{
-                    margin-#{map-get($margin-direction-base, $d)}: $spacer * $i;
+                    margin-#{map-get($margin-direction-base, $d)}: $spacer * $i !important;
                 }
             }
         }
     }
 }
 
-/* Spacing - pading */
+/* Spacing - padding */
 @for $i from 0 through 100{
     .p-#{$i*2}{
-        padding: $spacer * $i;
+        padding: $spacer * $i !important;
     }
 }
 
 @each $d in $padding-direction {
     @for $i from 0 through 100{
         .p#{$d}-#{$i*2}{
-            padding-#{map-get($padding-direction-base, $d)}: $spacer * $i;
+            padding-#{map-get($padding-direction-base, $d)}: $spacer * $i !important;
         }
     }
 }
@@ -45,7 +45,7 @@
         @for $i from 0 through 100{
             @media (max-width:map-get($rwd-reakpoint-base, $rwd)) {
                 .p#{$d}-#{$rwd}-#{$i*2}{
-                    padding-#{map-get($padding-direction-base, $d)}: $spacer * $i;
+                    padding-#{map-get($padding-direction-base, $d)}: $spacer * $i !important;
                 }
             }
         }

@@ -7,9 +7,11 @@
         border: 1px solid #555555;
         color: #555555;
         &.active{
+            color: #fff;
             background-color: #000;
         }
         &:hover{
+            color: #555555;
             background-color: #F2F2F2;
         }
     }
@@ -74,7 +76,14 @@
                 margin-left: 8px;
             }
             @include Phone(){
-                margin-left: 4px;
+                margin-left: 0;
+                margin-right: 4px;
+            }
+        }
+        &:last-child{
+            @include Phone(){
+                flex-direction: row-reverse;
+                justify-content: flex-end;
             }
         }
     }

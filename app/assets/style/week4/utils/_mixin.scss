@@ -1,0 +1,49 @@
+// 清除浮動
+@mixin clearfix() {
+    &::before,
+    &::after{
+        content: "";
+        display: table;
+    }
+    &::after{
+        clear: both;
+    }
+}
+
+// Breakpoint
+@mixin PC {
+    @media (max-width:1280px) {
+        @content;
+    }
+}
+
+@mixin Pad {
+    @media (max-width:996px) {
+        @content;
+    }
+}
+
+@mixin Phone {
+    @media (max-width:767px) {
+        @content;
+    }
+}
+
+// Wrap & Container
+// container 的 max-width 需要加上 padding 不然寬度超過頁面時字會貼在兩側
+@mixin wrap__1110{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@mixin wrap__690{
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+@mixin wrap__345{
+    max-width: 375px;
+    margin: 0 auto;
+}

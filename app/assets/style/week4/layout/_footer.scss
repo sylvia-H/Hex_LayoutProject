@@ -1,14 +1,6 @@
 /* 頁尾 footer 第一層 .footer */
 .footer{
-    padding: 40px 0;
     color: #FFF;
-    @include wrap__1110;
-    @include Pad(){
-        @include wrap__690;
-    }
-    @include Phone(){
-        @include wrap__345;
-    }
     a{
         color: #FFF;
     }
